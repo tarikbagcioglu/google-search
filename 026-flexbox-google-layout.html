@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.cdnfonts.com/css/product-sans" rel="stylesheet" />
+
+    <style>
+      :root {
+        --primary-color: white;
+        --secondary-color: #f2f2f2;
+        --mavi-color: #4285f4;
+        --kirmizi-color: #db4437;
+        --sari-color: #f4b400;
+        --yesil-color: #0f9d58;
+      }
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: "Product Sans", sans-serif;
+        font-size: 0.9rem;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .flex-container {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .item > nav > ul {
+        margin: 0;
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+      }
+      .item > nav > ul > li {
+        margin-right: 10px;
+      }
+
+      .top-bar {
+        display: flex;
+        justify-content: end;
+        padding: 10px;
+      }
+      .top-bar nav ul {
+        display: flex;
+        align-items: center;
+      }
+      .top-bar nav ul li:nth-child(1),
+      .top-bar nav ul li:nth-child(2) {
+        color: rgb(77, 77, 77);
+      }
+      .top-bar nav ul li:nth-child(3) {
+        padding: 15px;
+        width: 16px;
+        text-align: center;
+        border-radius: 50px;
+      }
+      .top-bar nav ul li:nth-child(3):hover {
+        background-color: rgb(0, 0, 0, 0.1);
+        transition: ease-in-out 0.4s;
+      }
+
+      .top-bar nav ul li:last-child button {
+        padding: 12px 22px;
+        border-radius: 50px;
+        background-color: #2656c9;
+        color: var(--secondary-color);
+        border: 0px;
+        font-family: inherit;
+        font-size: inherit;
+      }
+
+      .google {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 200px;
+      }
+
+      /* Google yazisi */
+      .google .google-amblem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;
+        height: 150px;
+      }
+      .google .google-amblem span {
+        font-family: "Product Sans", sans-serif;
+        padding: 1px;
+      }
+      .google .google-amblem span:nth-child(1) {
+        color: var(--mavi-color);
+      }
+      .google .google-amblem span:nth-child(2) {
+        color: var(--kirmizi-color);
+      }
+      .google .google-amblem span:nth-child(3) {
+        color: var(--sari-color);
+      }
+      .google .google-amblem span:nth-child(4) {
+        color: var(--mavi-color);
+      }
+      .google .google-amblem span:nth-child(5) {
+        color: var(--yesil-color);
+      }
+      .google .google-amblem span:nth-child(6) {
+        color: var(--kirmizi-color);
+      }
+      .google > input {
+        box-sizing: border-box;
+        width: 85vw;
+        max-width: 550px;
+        height: 50px;
+        align-self: center;
+        padding: 0px 20px;
+        border-radius: 50px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      .google > input:hover {
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2),
+          0 1px 8px 0 rgba(0, 0, 0, 0.19);
+      }
+      .google .btn {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        padding: 20px;
+      }
+      .google button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 250px;
+        height: 40px;
+        background-color: #f8f9fa;
+        border: 0;
+        border-radius: 4px;
+        padding: 0px 20px;
+        box-sizing: border-box;
+      }
+
+      .google button:hover {
+        box-shadow: 0 1px 2px 0 rgba(67, 67, 67, 0.2),
+          0 1px 2px 0 rgba(62, 62, 62, 0.19);
+      }
+
+      .google button:last-child {
+        flex: 1;
+      }
+      .google p {
+        text-align: center;
+      }
+      .footer {
+        background-color: var(--secondary-color);
+      }
+      .footer > div {
+        margin-right: 10px;
+        padding: 0px 30px;
+      }
+      .footer-nav {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .footer-nav > ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      .footer-nav > ul > li {
+        padding: 15px;
+      }
+      .footer-nav > ul > li > a {
+        color: inherit;
+      }
+      .footer > .bt-1 {
+        border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+      }
+      .footer > .bt-1 > ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      .footer > .bt-1 > ul > li {
+        padding: 15px;
+      }
+    </style>
+    <title>Flexbox Google Layout</title>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item top-bar">
+        <nav>
+          <ul>
+            <li><a href="#">Gmail</a></li>
+            <li><a href="#">Images</a></li>
+            <li><i class="fa-solid fa-bars"></i></li>
+            <li><button>Sign in</button></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="item google">
+        <div class="google-amblem">
+          <h1>
+            <span>G</span><span>o</span><span>o</span><span>g</span
+            ><span>l</span><span>e</span>
+          </h1>
+        </div>
+        <input type="search" placeholder="Search..." />
+        <div class="btn">
+          <button>Google Search</button>
+          <button>I'm Feeling Lucky</button>
+        </div>
+        <p>Google offered in: <a href="https://google.de">Turkish</a></p>
+      </div>
+      <div class="item footer">
+        <div class="bt-1">
+          <ul>
+            <li>United Kingdom</li>
+          </ul>
+        </div>
+        <div class="footer-nav">
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Advertising</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">How Search works</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
